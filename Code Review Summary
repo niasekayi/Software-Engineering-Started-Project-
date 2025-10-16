@@ -1,0 +1,107 @@
+Code Improvement Report
+
+Project: Boggle Solver Using Trie Data Structure for Efficient Word Finding
+
+Author: Nia Greene
+
+Reviewers: Torien Mitchell and Sharon Omotosho
+
+ 
+
+ 
+
+ 
+
+Project Description
+
+The project under review is titled “Boggle Solver Using Trie Data Structure for Efficient Word Finding.” The goal of this program is to efficiently solve the word game Boggle by identifying valid words that can be formed by connecting adjacent letters in a grid. The solution leverages a Trie data structure for rapid prefix and word lookups, improving efficiency over traditional search methods.
+
+The code is organized around core components that handle grid setup, Trie construction, and recursive search logic. The _dfs() method uses recursion to explore all valid word paths while adhering to Boggle’s rules—such as preventing letter reuse and recognizing special tiles like “Qu” and “St.” The program ensures smooth functionality and can be easily adapted to handle new dictionary inputs or variable grid sizes.
+
+ 
+
+ 
+
+ 
+
+Group Members (Reviewers)
+
+This project was reviewed by Torien Mitchell and Sharon Omotosho, both of whom provided thoughtful and constructive feedback. Their reviews were conducted with professionalism, focusing on clarity, organization, maintainability, and adherence to PEP 8 standards.
+
+ 
+
+ 
+
+ 
+
+Defects Found
+
+While both reviewers found the code logically sound and well-structured, they identified a few minor areas for refinement and style improvement:
+
+1. Docstrings for Private Methods
+
+Reviewer: Torien Mitchell
+
+Torien suggested adding brief docstrings to private methods such as _dfs() to describe parameters and return values. This addition would make the code more accessible for future collaborators and maintainers.
+
+2. Variable Naming and PEP 8 Compliance
+
+Reviewer: Torien Mitchell
+
+Torien also noted that using lowercase variable and attribute names (e.g., self.grid instead of self.Grid) would improve consistency with Python’s PEP 8 style guide.
+
+3. Avoiding Magic Numbers
+
+Reviewer: Torien Mitchell
+
+Replacing hard-coded values such as 3 (the minimum word length) with a named constant like MIN_WORD_LENGTH would make the code clearer and easier to modify.
+
+4. Loop Readability and Simplification
+
+Reviewer: Sharon Omotosho
+
+Sharon recommended breaking longer loops in the setGrid() method into smaller, more focused sections to improve readability and ease of debugging.
+
+5. Consistent Case Handling
+
+Reviewer: Sharon Omotosho
+
+She observed that keeping both the grid and dictionary words in a consistent case could simplify word comparisons and reduce potential confusion.
+
+6. Inline Comments for Readability
+
+Reviewer: Sharon Omotosho
+
+Adding quick comments in _dfs() to explain the roles of variables like cur_word and visited would make the recursive logic more transparent, especially for readers new to the codebase.
+
+ 
+
+ 
+
+ 
+
+Summary of Recommendations
+
+Both reviewers agreed that the Boggle Solver is a well-designed and functional implementation. Their combined recommendations are summarized as follows:
+
+Add concise docstrings to private methods to clarify their purpose and parameters.
+
+Rename class attributes and variables to align with PEP 8 standards.
+
+Replace the hard-coded minimum word length with a named constant (MIN_WORD_LENGTH).
+
+Simplify and segment long loops in setGrid() for better readability.
+
+Standardize case handling across the grid and dictionary for consistency.
+
+Include inline comments in _dfs() for improved code comprehension.
+
+Both reviewers praised the project’s clear structure, logical flow, and efficient handling of special Boggle tiles. They emphasized that implementing these refinements would enhance the project’s maintainability and professional quality.
+
+The total average review time was approximately 37.5 minutes, with reviewers identifying six minor improvement opportunities. No logical or functional errors were found, confirming the correctness and efficiency of the implementation.
+
+ 
+
+Conclusion
+
+The review process provided valuable insight into ways to refine and polish the Boggle Solver’s codebase. Both reviewers commended the clarity, efficiency, and thoughtful organization of the solution. Their recommendations focus on small yet impactful improvements—such as consistent naming, enhanced documentation, and minor readability tweaks—that will make the code even more professional and maintainable. Implementing these adjustments will further align the project with software engineering best practices and ensure its long-term scalability.
